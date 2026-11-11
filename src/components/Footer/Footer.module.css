@@ -1,0 +1,19 @@
+.footer {
+  margin-top: var(--section-gap);
+  border-top: 1px solid var(--color-line);
+  color: var(--color-muted);
+  font-size: var(--fs-small);
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.footer__link:hover {
+  color: var(--color-glow);
+}

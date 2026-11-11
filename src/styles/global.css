@@ -1,0 +1,126 @@
+/* Цвета и шрифты — в стиле черновика визитки: чёрный фон, приглушённый зелёный, светящийся акцент */
+:root {
+  --color-bg: #050505;
+  --color-surface: #0f1311;
+  --color-surface-2: #161c19;
+  --color-text: #f2f4f3;
+  --color-muted: #a7b1ab;
+  --color-accent: #5b8a6a; /* кнопки, как в Tilda */
+  --color-accent-hover: #6f9f7d;
+  --color-glow: #7ee2a8; /* свечение из иллюстрации */
+  --color-line: rgba(255, 255, 255, 0.12);
+
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+
+  /* Мобильная (до 1023 px) */
+  --fs-h1: 32px;
+  --fs-h2: 28px;
+  --fs-h3: 20px;
+  --fs-lead: 16px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+
+  --page-max: 1440px;
+  --page-pad: 20px;
+  --header-h: 64px;
+  --section-gap: 80px;
+  --block-gap: 24px;
+  --card-gap: 20px;
+  --radius: 16px;
+  --radius-s: 10px;
+  --button-h: 48px;
+}
+
+/* Лаптоп */
+@media (min-width: 1024px) {
+  :root {
+    --fs-h1: 48px;
+    --fs-h2: 32px;
+    --fs-h3: 24px;
+    --fs-lead: 20px;
+    --fs-body: 16px;
+    --fs-small: 14px;
+
+    --page-pad: 48px;
+    --header-h: 80px;
+    --section-gap: 120px;
+    --block-gap: 32px;
+    --card-gap: 28px;
+  }
+}
+
+/* Десктоп */
+@media (min-width: 1440px) {
+  :root {
+    --fs-h1: 64px;
+    --fs-h2: 40px;
+    --fs-h3: 24px;
+    --fs-lead: 24px;
+    --fs-body: 20px;
+    --fs-small: 16px;
+
+    --page-pad: 100px;
+    --section-gap: 140px;
+    --block-gap: 40px;
+    --card-gap: 40px;
+    --button-h: 56px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+}
+
+h1, h2, h3, p, ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-glow);
+  outline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}

@@ -1,0 +1,23 @@
+.projects {
+  margin-top: var(--section-gap);
+}
+
+.projects__lead {
+  margin: calc(var(--block-gap) * -0.5) 0 var(--block-gap);
+  color: var(--color-muted);
+}
+
+.projects__grid {
+  display: grid;
+  gap: var(--card-gap);
+}
+
+.projects__item {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

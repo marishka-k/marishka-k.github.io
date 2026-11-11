@@ -1,0 +1,77 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(5, 5, 5, 0.8);
+  border-bottom: 1px solid var(--color-line);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-height: var(--header-h);
+}
+
+.header__name {
+  font-size: var(--fs-body);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* На мобильной меню скрыто: страница короткая, разделы идут подряд */
+.header__nav {
+  display: none;
+}
+
+.header__list {
+  display: flex;
+  gap: 32px;
+}
+
+.header__link {
+  color: var(--color-muted);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.header__link:hover {
+  color: var(--color-glow);
+}
+
+.header__socials {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.header__social {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-line);
+  border-radius: 50%;
+  color: var(--color-text);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.header__social:hover {
+  border-color: var(--color-glow);
+  color: var(--color-glow);
+}
+
+@media (min-width: 1024px) {
+  .header__nav {
+    display: block;
+    margin-left: auto;
+  }
+
+  .header__socials {
+    margin-left: 16px;
+  }
+}

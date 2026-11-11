@@ -1,0 +1,94 @@
+/* Мобильная: квадратная иллюстрация сверху, текст под ней.
+   С лаптопа: широкая иллюстрация на весь экран, текст слева на тёмном поле */
+.hero {
+  position: relative;
+  max-width: var(--page-max);
+  margin: 0 auto;
+}
+
+.hero__picture {
+  display: block;
+}
+
+.hero__image {
+  width: 100%;
+  height: auto;
+}
+
+.hero__inner {
+  position: relative;
+  margin-top: -48px;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero__title {
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.hero__role {
+  color: var(--color-glow);
+  font-size: var(--fs-lead);
+  font-weight: 600;
+}
+
+.hero__lead {
+  max-width: 560px;
+  color: var(--color-muted);
+  font-size: var(--fs-body);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    aspect-ratio: 1680 / 900;
+    max-height: calc(100vh - var(--header-h));
+    min-height: 520px;
+    overflow: hidden;
+  }
+
+  .hero__picture,
+  .hero__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero__image {
+    object-fit: cover;
+    object-position: right center;
+  }
+
+  .hero__inner {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-top: 0;
+  }
+
+  .hero__content {
+    max-width: 46%;
+    gap: 20px;
+  }
+}
+
+/* Шире макета: края иллюстрации растворяются в фоне */
+@media (min-width: 1500px) {
+  .hero__image {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  }
+}

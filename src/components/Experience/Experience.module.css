@@ -1,0 +1,14 @@
+.experience {
+  margin-top: var(--section-gap);
+}
+
+.experience__list {
+  display: grid;
+  gap: var(--card-gap);
+}
+
+@media (min-width: 1024px) {
+  .experience__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

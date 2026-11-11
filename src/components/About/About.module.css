@@ -1,0 +1,91 @@
+.about {
+  margin-top: var(--section-gap);
+}
+
+.about__grid {
+  display: grid;
+  gap: var(--card-gap);
+}
+
+.about__card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 28px 24px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.about__subtitle {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+}
+
+.about__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about__item {
+  position: relative;
+  padding-left: 20px;
+  color: var(--color-muted);
+}
+
+/* точка-«огонёк» как в иллюстрации */
+.about__item::before {
+  content: '';
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-glow);
+  box-shadow: 0 0 8px var(--color-glow);
+}
+
+.about__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.about__fact {
+  padding: 6px 12px;
+  border: 1px solid rgba(126, 226, 168, 0.35);
+  border-radius: 999px;
+  color: var(--color-glow);
+  font-size: var(--fs-small);
+}
+
+.about__groups {
+  display: grid;
+  gap: 16px;
+}
+
+.about__group {
+  margin-bottom: 6px;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .about__groups {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about__grid {
+    grid-template-columns: 1fr 1.4fr;
+  }
+
+  .about__card {
+    padding: 36px 32px;
+  }
+}
