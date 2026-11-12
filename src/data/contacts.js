@@ -1,9 +1,9 @@
 // Контакты. Пустой href — ссылка не показывается (впишите свою)
 export const contacts = [
   { id: 'telegram', label: 'Telegram', href: 'https://t.me/m_kravchenko_dev' },
-  { id: 'behance', label: 'Behance', href: '' },
+  { id: 'behance', label: 'Behance', href: 'https://www.behance.net/marinakravche9' },
   { id: 'github', label: 'GitHub', href: 'https://github.com/marishka-k' },
-  { id: 'hh', label: 'hh.ru', href: '' },
+  { id: 'habr', label: 'Хабр Карьера', href: 'https://career.habr.com/kramarvik' },
   { id: 'mail', label: 'Почта', href: '' },
 ];
 
