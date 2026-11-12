@@ -9,7 +9,7 @@
 | Проект | Что это | Сайт | Код |
 |---|---|---|---|
 | YouMeal | Доставка еды: меню с фильтрами, корзина, оформление | [открыть](https://marishka-k.github.io/Food_project/) | [Food_project](https://github.com/marishka-k/Food_project) |
-| Yes | Интернет-магазин пляжной одежды | [открыть](https://marishka-k.github.io/Yes_project/) | [Yes_project](https://github.com/marishka-k/Yes_project) |
+| Yes | Интернет-магазин пляжной одежды с админкой | [открыть](https://marishka-k.github.io/Yes_project/) | [Yes_project](https://github.com/marishka-k/Yes_project) |
 | Botlegger | Редизайн сайта роботизированного бара | [открыть](https://marishka-k.github.io/Botlegger_project/) | [Botlegger_project](https://github.com/marishka-k/Botlegger_project) |
 | Самолёт | Диджитал-карточки для разговора | [открыть](https://marishka-k.github.io/Samolet_project/) | [Samolet_project](https://github.com/marishka-k/Samolet_project) |
 
