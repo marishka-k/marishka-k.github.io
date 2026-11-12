@@ -81,3 +81,22 @@
   margin-top: auto;
   padding-top: 12px;
 }
+
+/* Широкая карточка (последняя при нечётном количестве): с 1024 px обложка слева, текст справа,
+   обложка той же ширины, что у карточек в ряду выше */
+@media (min-width: 1024px) {
+  .project-card_wide {
+    display: grid;
+    grid-template-columns: calc((100% - var(--card-gap)) / 2) 1fr;
+    column-gap: var(--card-gap);
+  }
+
+  .project-card_wide .project-card__body {
+    justify-content: center;
+    padding: 32px 32px 32px 0;
+  }
+
+  .project-card_wide .project-card__actions {
+    margin-top: 8px;
+  }
+}

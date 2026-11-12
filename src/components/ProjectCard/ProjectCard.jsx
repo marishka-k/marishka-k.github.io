@@ -1,12 +1,13 @@
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import { asset } from '../../utils/asset';
+import { cx } from '../../utils/cx';
 import styles from './ProjectCard.module.css';
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, wide = false }) {
   const { title, subtitle, text, tags, preview, bg, site, code } = project;
   return (
-    <article className={styles['project-card']}>
+    <article className={cx(styles['project-card'], wide && styles['project-card_wide'])}>
       <div className={styles['project-card__preview']} style={{ background: bg }}>
         {preview ? (
           <img className={styles['project-card__image']} src={asset(`images/projects/${preview}`)} alt={`Обложка проекта ${title}`} loading="lazy" />

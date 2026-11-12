@@ -20,4 +20,8 @@
   .projects__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .projects__item_wide {
+    grid-column: 1 / -1;
+  }
 }

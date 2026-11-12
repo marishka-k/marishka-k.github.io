@@ -45,4 +45,15 @@ export const projects = [
     site: 'https://marishka-k.github.io/Samolet_project/',
     code: 'https://github.com/marishka-k/Samolet_project',
   },
+  {
+    id: 'seven-seeds',
+    title: 'Seven Seeds',
+    subtitle: 'Лендинг кулинарного мастер-класса',
+    text: 'Лонгрид-приглашение на мастер-класс: меню, раскрывающиеся карточки «Что интересного», ведущая, регистрация в модальном окне.',
+    tags: ['Figma', 'React', 'Слайдеры', 'Адаптив'],
+    preview: 'seven-seeds.webp',
+    bg: '#cfdde3',
+    site: 'https://marishka-k.github.io/Seven_Seeds_project/',
+    code: 'https://github.com/marishka-k/Seven_Seeds_project',
+  },
 ];
